@@ -63,3 +63,73 @@ class ProjectManager extends Instructor {
     return `${name} debugs ${student.name}'s code on ${subject}`;
   }
 }
+
+const adam = new Person({
+  name: 'Adam',
+  location: 'Amsterdam',
+  age: 37,
+  gender: 'male',
+});
+
+const betsy = new Person({
+  name: 'Betsy',
+  location: 'Bloomington',
+  age: 30,
+  gender: 'female',
+});
+
+const fred = new Instructor({
+  name: 'Fred',
+  location: 'Bedrock',
+  age: 37,
+  gender: 'male',
+  favLanguage: 'JavaScript',
+  specialty: 'Front-end',
+  catchPhrase: `Don't forget the homies`
+});
+
+const caitlin = new Instructor({
+  name: 'Caitlin',
+  location: 'Castlerock',
+  age: 45,
+  gender: 'female',
+  favLanguage: 'C#',
+  specialty: 'Back-end',
+  catchPhrase: `Just do it`
+});
+
+const devin = new Student({
+  name: 'Devin',
+  location: 'Detroit',
+  age: 27,
+  gender: 'male',
+  className: 'CS132',
+  favSubjects: ['Html', 'CSS', 'JavaScript']
+});
+
+const evelyn = new Student({
+  name: 'Evelyn',
+  location: 'Egypt',
+  age: 23,
+  gender: 'female',
+  className: 'CS132',
+  favSubjects: ['Html', 'CSS', 'JavaScript']
+});
+
+const gretchen = new ProjectManager({
+  name: 'Gretchen',
+  location: 'Grayson',
+  age: 42,
+  gender: 'female',
+  gradClassName: 'CS1',
+  favInstructor: 'Sean'
+});
+
+const henry = new ProjectManager({
+  name: 'Henry',
+  location: 'Hillsdale',
+  age: 46,
+  gender: 'male',
+  gradClassName: 'CS12',
+  favInstructor: 'Seanie'
+});
