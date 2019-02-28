@@ -25,6 +25,10 @@ class Instructor extends Person {
   grade(student, subject) {
     return `${student} receives a perfect score on ${subject}`;
   }
+
+  finalGrade(){
+    return Math.floor(Math.random() * 100);
+  }
 }
 
 class Student extends Person {
@@ -106,7 +110,8 @@ const devin = new Student({
   age: 27,
   gender: 'male',
   className: 'CS132',
-  favSubjects: ['Html', 'CSS', 'JavaScript']
+  favSubjects: ['Html', 'CSS', 'JavaScript'],
+  grade: 85
 });
 
 const evelyn = new Student({
@@ -115,7 +120,8 @@ const evelyn = new Student({
   age: 23,
   gender: 'female',
   className: 'CS132',
-  favSubjects: ['Html', 'CSS', 'JavaScript']
+  favSubjects: ['Html', 'CSS', 'JavaScript'],
+  grade: 90
 });
 
 const gretchen = new ProjectManager({
