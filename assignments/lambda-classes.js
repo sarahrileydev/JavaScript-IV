@@ -23,7 +23,7 @@ class Instructor extends Person {
     return `Today we are learning about ${subject}`;
   }
   grade(student, subject) {
-    return `${student.name} receives a perfect score on ${subject}`;
+    return `${student} receives a perfect score on ${subject}`;
   }
 }
 
@@ -36,15 +36,17 @@ class Student extends Person {
   }
 
   listsSubjects() {
-    return `${this.favSubjects}`;
+    return this.favSubjects.forEach(function (list) {
+      console.log(list);
+    });
   }
 
-  PRAssignment(subject) {
-    return `${student.name} has submitted a PR for ${subject}`;
+  PRAssignment(student, subject) {
+    return `${student} has submitted a PR for ${subject}`;
   }
 
-  sprintChallenge(subject) {
-    return `${student.name} has begun sprint challenge on ${subject}`;
+  sprintChallenge(student, subject) {
+    return `${student} has begun sprint challenge on ${subject}`;
   }
 }
 
@@ -55,12 +57,12 @@ class ProjectManager extends Instructor {
     this.favInstructor = att.favInstructor;
   }
 
-  standUp(channel) {
-    return  `${name} announces to ${channel}, @channel standy times!​​​​​`;
+  standUp(name, channel) {
+    return `${name} announces to ${channel}, standy times!​​​​​`;
   }
 
   debugsCode(student, subject) {
-    return `${name} debugs ${student.name}'s code on ${subject}`;
+    return `${this.name} debugs ${student}'s code on ${subject}`;
   }
 }
 
@@ -133,3 +135,14 @@ const henry = new ProjectManager({
   gradClassName: 'CS12',
   favInstructor: 'Seanie'
 });
+
+
+console.log(adam.location);
+console.log(betsy.speak());
+console.log(fred.demo('Javascript'));
+console.log(caitlin.grade(devin.name, "Javascript"));
+devin.listsSubjects();
+console.log(evelyn.PRAssignment(evelyn.name, 'Javascript'));
+console.log(evelyn.sprintChallenge(devin.name, 'Css'));
+console.log(gretchen.standUp(henry.name, 'Web18'));
+console.log(henry.debugsCode(devin.name, 'Java'));
